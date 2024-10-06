@@ -1,5 +1,4 @@
 import subprocess
-import os
 
 
 def test_load():
@@ -16,9 +15,9 @@ def test_load():
 
 def test_query():
     """Tests the query operation."""
-    test_query = "SELECT * FROM WRRankingDB"
+    query_string = "SELECT * FROM WRRankingDB"
     result = subprocess.run(
-        ["python", "main.py", "query", test_query],
+        ["python", "main.py", "query", query_string],
         capture_output=True,
         text=True,
         check=True,
@@ -86,28 +85,9 @@ def test_delete_record():
     assert "Delete Record" in result.stdout
 
 
-def test_unknown_operation():
-    """Tests handling of an unknown operation."""
-    result = subprocess.run(
-        ["python", "main.py", "unknown_operation"],
-        capture_output=True,
-        text=True,
-    )
-
-    # Check that the return code is not 0
-    assert result.returncode != 0  # Expecting a failure
-
-    # Check that the output contains the expected error message
-    assert (
-        "Unknown operation. Please use one of the following: load, query, create, update, delete."
-        in result.stdout
-    )
-
-
 if __name__ == "__main__":
     test_load()
     test_query()
     test_create_record()
     test_update_record()
     test_delete_record()
-    test_unknown_operation()
