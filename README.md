@@ -1,6 +1,6 @@
-# Danish_Maknojia_Assignment1
+# Danish_Maknojia_MP5
 
-[![CI](https://github.com/nogibjj/Danish_Maknojia_Assignment1/actions/workflows/data.yml/badge.svg)](https://github.com/nogibjj/Danish_Maknojia_Assignment1/actions/workflows/data.yml)
+
 
 ## This project contains:
 - README.MD

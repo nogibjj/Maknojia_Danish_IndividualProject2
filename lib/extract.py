@@ -1,5 +1,5 @@
 """
-Extract a dataset from a URL in this case it is the Week 5 Fantasy Football PPR WR 
+Extract a dataset from a URL the Week 5 Fantasy Football PPR WR 
 """
 
 import os
