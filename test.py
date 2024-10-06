@@ -33,13 +33,19 @@ def test_create_record():
             "python",
             "main.py",
             "create",
-            "1",  # rk
-            "Player Name",  # player_name
-            "Team A",  # team
-            "Team B",  # opp
-            "Matchup A",  # matchup
-            "start",  # start_sit
-            "50.5",  # proj_fpts
+            # Rank
+            "1",
+            "Player Name",
+            # Team
+            "Team A",
+            # Opponent
+            "Team B",
+            # Matchup
+            "Matchup A",
+            # Start_sit
+            "start",
+            # proj_fpts
+            "50.5",
         ],
         capture_output=True,
         text=True,
@@ -56,14 +62,14 @@ def test_update_record():
             "python",
             "main.py",
             "update",
-            "1",  # record_id
-            "2",  # rk
-            "Updated Player Name",  # player_name
-            "Updated Team A",  # team
-            "Updated Team B",  # opp
-            "Updated Matchup A",  # matchup
-            "bench",  # start_sit
-            "60.0",  # proj_fpts
+            "1",
+            "2",
+            "Updated Player Name",
+            "Updated Team A",
+            "Updated Team B",
+            "Updated Matchup A",
+            "bench",
+            "60.0",
         ],
         capture_output=True,
         text=True,
@@ -76,7 +82,7 @@ def test_update_record():
 def test_delete_record():
     """Tests the delete_record operation."""
     result = subprocess.run(
-        ["python", "main.py", "delete", "1"],  # record_id
+        ["python", "main.py", "delete", "1"],
         capture_output=True,
         text=True,
         check=True,

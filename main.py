@@ -61,7 +61,7 @@ def main():
             print(
                 "Insufficient arguments. Usage: python main.py update <record_id> <rk> <player_name> <team> <opp> <matchup> <start_sit> <proj_fpts>"
             )
-            sys.exit(1)  # Exit with an error code
+            sys.exit(1)
 
     elif operation == "delete":
         # Ensure a record_id argument is passed for deletion
@@ -71,13 +71,12 @@ def main():
             delete_record(record_id)
         else:
             print("Insufficient arguments. Usage: python main.py delete <record_id>")
-            sys.exit(1)  # Exit with an error code
-
+            sys.exit(1)
     else:
         print(
             "Unknown operation. Please use one of the following: load, query, create, update, delete."
         )
-        sys.exit(1)  # Exit with an error code
+        sys.exit(1)
 
 
 if __name__ == "__main__":
