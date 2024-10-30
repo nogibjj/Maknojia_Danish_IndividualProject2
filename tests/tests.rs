@@ -1,5 +1,5 @@
 // src/tests.rs
-use danish_maknojia::{transform_load, query};
+use danish_maknojia::{query, transform_load};
 
 #[test]
 fn test_transform_load() {
@@ -26,7 +26,7 @@ fn test_create_record() {
     // Optionally, verify insertion by querying the database
     let select_query = "SELECT * FROM WRRankingDB WHERE rk = 1;";
     let result = query(select_query);
-    
+
     assert!(result.is_ok());
 }
 

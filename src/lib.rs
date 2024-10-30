@@ -1,10 +1,10 @@
 // src/lib.rs
+use csv; // Ensure the csv crate is imported
 use rusqlite::{params, Connection, Result};
+use std::error::Error;
 use std::fs;
 use std::fs::OpenOptions;
-use std::io::Write;
-use csv; // Ensure the csv crate is imported
-use std::error::Error; // Import the Error trait for custom error handling
+use std::io::Write; // Import the Error trait for custom error handling
 
 const LOG_FILE: &str = "query_log.md";
 
@@ -31,7 +31,8 @@ pub fn extract(url: &str, file_path: &str, directory: &str) {
     println!("Extraction successful!");
 }
 
-pub fn transform_load(dataset: &str) -> Result<String, Box<dyn Error>> { // Updated to return a Box<dyn Error>
+pub fn transform_load(dataset: &str) -> Result<String, Box<dyn Error>> {
+    // Updated to return a Box<dyn Error>
     let conn = Connection::open("MatchResultsDB.db")?;
 
     conn.execute("DROP TABLE IF EXISTS WRRankingDB", [])?;
@@ -50,8 +51,7 @@ pub fn transform_load(dataset: &str) -> Result<String, Box<dyn Error>> { // Upda
     )?;
 
     // Use the csv crate to read the dataset
-    let mut rdr = csv::Reader::from_path(dataset)
-        .map_err(|e| format!("CSV Error: {}", e))?; // Convert CSV errors to String
+    let mut rdr = csv::Reader::from_path(dataset).map_err(|e| format!("CSV Error: {}", e))?; // Convert CSV errors to String
 
     let mut stmt = conn.prepare(
         "INSERT INTO WRRankingDB (
@@ -94,7 +94,7 @@ pub fn query(query: &str) -> Result<()> {
                 row.get::<usize, String>(3)?, // opp
                 row.get::<usize, String>(4)?, // matchup
                 row.get::<usize, String>(5)?, // start_sit
-                row.get::<usize, f64>(6)?,     // proj_fpts
+                row.get::<usize, f64>(6)?,    // proj_fpts
             ))
         })?;
 

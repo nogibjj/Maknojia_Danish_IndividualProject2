@@ -1,4 +1,4 @@
-use danish_maknojia::{extract, transform_load, query}; // Updated to match your lib.rs
+use danish_maknojia::{extract, query, transform_load}; // Updated to match your lib.rs
 use std::env;
 
 fn main() {
