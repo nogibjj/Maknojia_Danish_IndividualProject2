@@ -1,7 +1,4 @@
-use danish_maknojia::{
-    query::{create_record, delete_record, general_query, update_record},
-    transform_load::load,
-};
+use danish_maknojia::{create_record, delete_record, general_query, load, update_record};
 use std::env;
 
 fn main() {
