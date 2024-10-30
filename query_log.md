@@ -385,3 +385,27 @@ SELECT * FROM WRRankingDB
 SELECT * FROM WRRankingDB;
 ```
 
+```sql
+```sql
+SELECT * FROM WRRankingDB WHERE rk = 1;
+```
+
+SELECT * FROM WRRankingDB WHERE matchup = 'Matchup X';
+```
+
+```sql
+SELECT * FROM WRRankingDB WHERE matchup = 'Matchup X';```sql
+
+```
+
+SELECT * FROM WRRankingDB WHERE rk = 1;
+```
+
+```sql
+SELECT * FROM WRRankingDB WHERE matchup = 'Matchup X';```sql
+SELECT * FROM WRRankingDB WHERE rk = 1;
+```
+
+
+```
+
