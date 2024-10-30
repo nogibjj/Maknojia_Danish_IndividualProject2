@@ -1,6 +1,6 @@
-# Danish_Maknojia_MP5
+# Danish_Maknojia_IndividualProject2
 
-[![CI](https://github.com/nogibjj/Maknojia_Danish_MP5/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Maknojia_Danish_MP5/actions/workflows/cicd.yml)
+[![Rust CI/CD Pipeline](https://github.com/nogibjj/Maknojia_Danish_IndividualProject2/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Maknojia_Danish_IndividualProject2/actions/workflows/cicd.yml)
 
 ## Project Overview
 This project is a python script which interacts with a dataset on SQLlite. The project focuses on the ETL pipeline (Extract, Transform & Load):
