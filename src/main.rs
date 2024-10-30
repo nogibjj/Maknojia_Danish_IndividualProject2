@@ -1,4 +1,7 @@
-use danish_maknojia::{query::{general_query, create_record, update_record, delete_record}, transform_load::load};
+use danish_maknojia::{
+    query::{create_record, delete_record, general_query, update_record},
+    transform_load::load,
+};
 use std::env;
 
 fn main() {
@@ -67,7 +70,16 @@ fn main() {
                 let proj_fpts = args[9].parse::<f64>().expect("Invalid proj_fpts value");
 
                 println!("Updating record...");
-                update_record(record_id, rk, player_name, team, opp, matchup, start_sit, proj_fpts);
+                update_record(
+                    record_id,
+                    rk,
+                    player_name,
+                    team,
+                    opp,
+                    matchup,
+                    start_sit,
+                    proj_fpts,
+                );
                 println!("Record updated successfully!");
             } else {
                 println!(

@@ -7,5 +7,4 @@ edition = "2021"
 rusqlite = "0.27.0"  
 reqwest = { version = "0.11", features = ["blocking"] } 
 
-# This includes your custom library module 'danish_maknojia'
-danish_maknojia = { path = "../danish_maknojia" }  # Adjust path as necessary
+
