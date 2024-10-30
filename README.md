@@ -1,43 +1,41 @@
-# Danish_Maknojia_IndividualProject2
+# Danish Maknojia IDS706 Week 8 Individual
 
 [![Rust CI/CD Pipeline](https://github.com/nogibjj/Maknojia_Danish_IndividualProject2/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Maknojia_Danish_IndividualProject2/actions/workflows/cicd.yml)
 
-## Project Overview
-This project is a python script which interacts with a dataset on SQLlite. The project focuses on the ETL pipeline (Extract, Transform & Load):
+## Project Summary: Data Extraction, Transformation, Loading (ETL) and Querying Tool
 
-- Extract: Raw data is accessed via github repo
+This project provides a set of functions for performing ETL operations on a dataset and querying a SQLite database. I utilized GitHub Copilot to convert my previous Python code into Rust, modifying it as necessary to improve accuracy and ensure proper error handling.
 
-- Transform & Load: Reads data from a CSV file, processes it, and loads it into a local SQLite3 database named WRRankingDB.db.
+### YouTube Video Link
+[YouTube Link](#)
 
-- Query: Performs CRUD operations (create, read, update, delete) on the database, and logging each SQL query to a markdown file (query_log.md). The log_query function appends the executed SQL queries to the log file, while general_query, create_record, update_record, delete_record, and read_data manage data operations within the database.
+## Components:
 
-## Directory Overview
+### Data Extraction:
+- The `extract` function downloads data from a specified URL and saves it to a local file.
 
-```
-├── Makefile
-├── README.md
-├── WRRankingDB.db
-├── __pycache__
-│   ├── main.cpython-312.pyc
-│   └── test.cpython-312-pytest-7.4.0.pyc
-├── data
-│   └── WRRankingsWeek5.csv
-├── lib
-│   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-312.pyc
-│   │   ├── query.cpython-312.pyc
-│   │   └── transform_load.cpython-312.pyc
-│   ├── extract.py
-│   ├── query.py
-│   └── transform_load.py
-├── main.py
-├── query_log.md
-├── requirement.txt
-└── test.py
+### Data Transformation and Loading:
+- The `transform_load` function reads a CSV dataset and inserts its records into a SQLite database after performing necessary table operations. It creates a table named `WRRankingDB` with specific columns for ranking, player name, team, opponent, matchup, start/sit status, and projected fantasy points.
 
-```
+### Database Querying:
+- The `query` function allows users to perform SELECT, INSERT, UPDATE, and DELETE operations on the database. It logs the queries into a Markdown file named `query_log.md`.
 
-## CI/CD
-1. make all: Will test, format, and lint the project
+### Logging:
+- The `log_query` function appends SQL queries to a log file, facilitating tracking and analysis of executed queries.
+
+## Preparation and Dependency Installation:
+1. Open codespaces.
+2. Wait for codespaces to be built.
+3. Build dependencies: `cargo build`.
+4. Extract data: `cargo run extract`.
+5. Transform and load data: `cargo run transform_load`.
+6. Sample query: You can use `cargo run query <insert your own query here>` for CRUD operations.
+
+## Check Format and Test Errors:
+- Format code: `make format`.
+- Lint code: `make lint`.
+- Test code: `make test`.
+
+## Use of LLM
+In my coding process, I utilized a Large Language Model (LLM) to assist with converting existing Python code to Rust. The LLM helped me generate Rust functions that aligned with the syntax and structure of Rust programming, while also providing suggestions for error handling and optimizing code efficiency. It served as a valuable resource in understanding Rust's idioms and best practices, ultimately enhancing the quality of my code.
 
