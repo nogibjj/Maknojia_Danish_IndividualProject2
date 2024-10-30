@@ -39,29 +39,28 @@ all: format lint test run
 
 # Custom tasks
 
-# Example: Extract data
+# Extract data
 extract: 
 	cargo run extract
 
-# Example: Transform and Load data
+# Transform and Load data
 transform_load:
 	cargo run transform_load
 
-# Example: Create a database entry
+# Create a database entry
 create:
-	cargo run query "INSERT INTO WRRankingDB (RK, 'PLAYER NAME', TEAM, OPP, MATCHUP, 'START/SIT', 'PROJ. FPTS') VALUES (600, 'John Doe', 'Team A', 'Team B', 'Favorable', 'Start', 12.3);"
-	
-# Example: Read from the database
+	cargo run query "INSERT INTO WRRankingDB (rk, player_name, team, opp, matchup, start_sit, proj_fpts) VALUES (1, 'Danish Maknojia', 'Team Alpha', 'Team Beta', 'Matchup X', 'Start', 15.7);"
+
+# Read from the database
 read:
-	cargo run query "SELECT * FROM WRRankingDB WHERE server = 'John Doe';"
+	cargo run query "SELECT * FROM WRRankingDB WHERE team = 'Team Alpha';"
 
-# Example: Update a database entry
+# Update a database entry
 update:
-	cargo run update "UPDATE WRRankingDB SET 'PLAYER NAME' = 'Jane Doe', TEAM = 'New Team', OPP = 'New Opp', MATCHUP = 'New Matchup', 'START/SIT' = 'Start', 'PROJ. FPTS' = 20.5 WHERE id = 1;"
+	cargo run query "UPDATE WRRankingDB SET proj_fpts = 18.5 WHERE player_name = 'Danish Maknojia' AND matchup = 'Matchup X';"
 
-
-# Example: Delete a database entry
+# Delete a database entry
 delete:
-	cargo run delete "DELETE FROM WRRankingDB WHERE id = 1;"
+	cargo run query "DELETE FROM WRRankingDB WHERE player_name = 'Danish Maknojia' AND team = 'Team Alpha';"
 
 

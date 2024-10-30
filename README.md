@@ -1,4 +1,4 @@
-# Danish Maknojia IDS706 Week 8 Individual
+# Danish Maknojia IDS706 Individual Project 2
 
 [![Rust CI/CD Pipeline](https://github.com/nogibjj/Maknojia_Danish_IndividualProject2/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Maknojia_Danish_IndividualProject2/actions/workflows/cicd.yml)
 
@@ -7,7 +7,7 @@
 This project provides a set of functions for performing ETL operations on a dataset and querying a SQLite database. I utilized GitHub Copilot to convert my previous Python code into Rust, modifying it as necessary to improve accuracy and ensure proper error handling.
 
 ### YouTube Video Link
-[YouTube Link](#)
+[YouTube Link](https://youtu.be/eYr2D0u7P-4?si=jsTaQMgiSqfkWXVe)
 
 ## Components:
 
@@ -18,7 +18,7 @@ This project provides a set of functions for performing ETL operations on a data
 - The `transform_load` function reads a CSV dataset and inserts its records into a SQLite database after performing necessary table operations. It creates a table named `WRRankingDB` with specific columns for ranking, player name, team, opponent, matchup, start/sit status, and projected fantasy points.
 
 ### Database Querying:
-- The `query` function allows users to perform SELECT, INSERT, UPDATE, and DELETE operations on the database. It logs the queries into a Markdown file named `query_log.md`.
+- The `query` function allows users to perform CRUD operations on the database. It logs the queries into a Markdown file named `query_log.md`.
 
 ### Logging:
 - The `log_query` function appends SQL queries to a log file, facilitating tracking and analysis of executed queries.

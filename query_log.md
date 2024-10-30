@@ -417,3 +417,127 @@ SELECT * FROM WRRankingDB WHERE matchup = 'Matchup X';SELECT * FROM WRRankingDB 
 
 ```
 
+```sql
+```sql
+SELECT * FROM WRRankingDB WHERE rk = 1;SELECT * FROM WRRankingDB WHERE matchup = 'Matchup X';
+```
+
+
+```
+
+```sql
+INSERT INTO WRRankingDB (rk, player_name, team, opp, matchup, start_sit, proj_fpts) VALUES (1, 'Danish Maknojia', 'Team Alpha', 'Team Beta', 'Matchup X', 'Start', 15.7);
+```
+
+```sql
+SELECT * FROM WRRankingDB WHERE team = 'Team Alpha';
+```
+
+```sql
+UPDATE WRRankingDB SET proj_fpts = 18.5 WHERE player_name = 'Danish Maknojia' AND matchup = 'Matchup X';
+```
+
+```sql
+DELETE FROM WRRankingDB WHERE player_name = 'Danish Maknojia' AND team = 'Team Alpha';
+```
+
+```sql
+SELECT * FROM WRRankingDB WHERE proj_fpts > 10;
+```
+
+```sql
+UPDATE WRRankingDB SET proj_fpts = 18.5 WHERE player_name = 'Danish Maknojia' AND matchup = 'Matchup X';
+```
+
+```sql
+SELECT * FROM WRRankingDB WHERE proj_fpts > 10;
+```
+
+```sql
+SELECT * FROM WRRankingDB;
+```
+
+```sql
+INSERT INTO WRRankingDB (rk, player_name, team, opp, matchup, start_sit, proj_fpts) VALUES (1, 'Danish Maknojia', 'Team Alpha', 'Team Beta', 'Matchup X', 'Start', 15.7);
+```
+
+```sql
+SELECT * FROM WRRankingDB;
+```
+
+```sql
+DELETE FROM WRRankingDB WHERE player_name = 'Danish Maknojia' AND team = 'Team Alpha';
+```
+
+```sql
+SELECT * FROM WRRankingDB;
+```
+
+```sql
+```sql
+SELECT * FROM WRRankingDB WHERE matchup = 'Matchup X';SELECT * FROM WRRankingDB WHERE rk = 1;
+```
+
+
+```
+
+```sql
+SELECT * FROM WRRankingDB
+```
+
+```sql
+INSERT INTO WRRankingDB (rk, player_name, team, opp, matchup, start_sit, proj_fpts) VALUES (1, 'Danish Maknojia', 'Team Alpha', 'Team Beta', 'Matchup X', 'Start', 15.7);
+```
+
+```sql
+SELECT * FROM WRRankingDB
+```
+
+```sql
+SELECT * FROM WRRankingDB WHERE team = 'Team Alpha';
+```
+
+```sql
+UPDATE WRRankingDB SET proj_fpts = 18.5 WHERE player_name = 'Danish Maknojia' AND matchup = 'Matchup X';
+```
+
+```sql
+SELECT * FROM WRRankingDB;
+```
+
+```sql
+DELETE FROM WRRankingDB WHERE player_name = 'Danish Maknojia' AND team = 'Team Alpha';
+```
+
+```sql
+SELECT * FROM WRRankingDB;
+```
+
+```sql
+INSERT INTO WRRankingDB (rk, player_name, team, opp, matchup, start_sit, proj_fpts) VALUES (1, 'Danish Maknojia', 'Team Alpha', 'Team Beta', 'Matchup X', 'Start', 15.7);
+```
+
+```sql
+SELECT * FROM WRRankingDB;
+```
+
+```sql
+SELECT * FROM WRRankingDB WHERE team = 'Team Alpha';
+```
+
+```sql
+UPDATE WRRankingDB SET proj_fpts = 18.5 WHERE player_name = 'Danish Maknojia' AND matchup = 'Matchup X';
+```
+
+```sql
+SELECT * FROM WRRankingDB;
+```
+
+```sql
+DELETE FROM WRRankingDB WHERE player_name = 'Danish Maknojia' AND team = 'Team Alpha';
+```
+
+```sql
+SELECT * FROM WRRankingDB;
+```
+
