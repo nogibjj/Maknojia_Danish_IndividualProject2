@@ -1,0 +1,13 @@
+[package]
+name = "SQL_ETL"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+# This specifies that the library is in `src/lib.rs`
+name = "fibonacci_performance"
+crate-type = ["lib", "cdylib"]
+
+[dependencies]
+sysinfo = "0.24"
+systemstat = "0.1"
