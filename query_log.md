@@ -377,3 +377,11 @@ UPDATE WRRankingDB
 DELETE FROM WRRankingDB WHERE id=1;
 ```
 
+```sql
+SELECT * FROM WRRankingDB
+```
+
+```sql
+SELECT * FROM WRRankingDB;
+```
+
