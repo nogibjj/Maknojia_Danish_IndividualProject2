@@ -541,3 +541,11 @@ DELETE FROM WRRankingDB WHERE player_name = 'Danish Maknojia' AND team = 'Team A
 SELECT * FROM WRRankingDB;
 ```
 
+```sql
+```sql
+SELECT * FROM WRRankingDB WHERE matchup = 'Matchup X';SELECT * FROM WRRankingDB WHERE rk = 1;
+```
+
+
+```
+
